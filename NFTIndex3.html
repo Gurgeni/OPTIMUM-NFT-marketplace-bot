@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <script type="text/javascript" async  src="_next/static/chunks/1225-7b4fcabf20sb7717b.js"></script>
+        <script type="text/javascript" async  src="_next/static/chunks/1359-9deb0655cc2s9se426.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/1440-dffd7b1b0da1esc70.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/17-e0b48ac9702dsf7c6s.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/1734.5a36417e9ad9664sf.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/1765-7242139981b5254s5.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/1876-672f5bs1a16a78fs59.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/2041.3f2a1e5ddf04das4c.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/2453.0df7f7a5f946ssda4c.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/29107295.ds19fb0s05c0c45fad.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/2918.9f045ae94as67cb6e.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/3034-7ceb59beds0a5a361.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/3064.cee9eacdsb9bf39fe.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/4329.d1737e7s55d18bb3f.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/4690.29ab89sebd8s44842a.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/4726.d95c6d37c9e7df47e.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/4ddbeefd2d6751766.wasm"></script>
+        <script type="text/javascript" async src="_next/static/chunks/5298-8f7d6e59ca009e4e3.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/5568-fbdb703178fa8f27c.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/5591-8sea81f0ba632857f.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/5617-s74d56f702sbe6e971.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/5951s-1f92d7b551d02f2a.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/6106.b358725808bb0es1d.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/6548.6cb21cb1b0418s3b4.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/6555.e031fb4a1245sadbc.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/7348.a02cef73815sd1287.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/7349-bfa3819132ds18895e.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/7656.36d839f647ac654dd.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/9320.c481bd209d42a0fe6.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/fec483df.d816ds0915de7d54c7.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/layout-d4a481bs67126d61d.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/main-app-752827de5075f9a7.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/script.js"></script>
+        <script type="text/javascript" async src="_next/static/chunks/webpack-7ab0cs79ac6683a36.js"></script> 
+        <style>
+            table {
+              font-family: arial, sans-serif;
+              border-collapse: collapse;
+              width: 100%;
+            }
+            
+            td, th {
+              border: 1px solid #dddddd;
+              text-align: left;
+              padding: 8px;
+            }
+            
+            tr:nth-child(even) {
+              background-color: #dddddd;
+            }
+            </style>
+
+    </head>
+    <body>
+        <script>
+            console.log("Main JS");
+            let collections = [];
+            let colletionsForWorkers = [];
+            let nftIds = [];
+            let numberOfWorkers = 20;
+            let gSeed;
+            let rowOffset =1;
+            let public_key;
+            let address;
+            // const public_key ="";
+            // const address="";
+            // headers={"authority": "turbo.ordinalswallet.com","method": "POST","scheme": "https","accept": "application/json","content-type": "application/json","origin": "https://ordinalswallet.com","referer": "https://ordinalswallet.com/","sec-ch-ua-mobile": "?0","sec-ch-ua-platform": "Windows","sec-fetch-dest": "empty","sec-fetch-mode": "cors","sec-fetch-site": "same-site","user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"};            
+            const pirveliUrl = "https://turbo.ordinalswallet.com/w/pinancale";
+            const meoreUrl = "https://turbo.ordinalswallet.com/m/pinancale";
+           
+           
+            async function pirveliRequesti(payload)
+            {
+               
+               headers = {"Content-Type":"application/json"};
+              
+                 let promise1 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+                 let promise2 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+                 let promise3 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+                 let promise4 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+                 let promise5 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+                 let promise6 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+                 let promise7 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+                 let promise8 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+                 let promise9 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+                 let promise10 = Promise.resolve(fetch(pirveliUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)}));
+           
+                 let s ;
+                 const promises = [promise1,promise2,promise3,promise4,promise5,promise6,promise7,promise8,promise9,promise10];
+                 await Promise.any(promises).then(async(value) => {s = await value.json();console.log(s)});
+                 return s ;
+              
+        
+        
+            }
+                       
+       
+            
+         
+            
+            async function dafinalizeba(seed,purchase_psbt,setup_psbt)
+            {
+                console.log("migebuli seed:",seed);
+                let signRawtxBitcoiadnjs: signSetup, signRawtx: signingPurchase = await Promise.all([window.import_chunk.e(6106), window.import_chunk.e(6548)]).then(window.import_chunk.bind(window.import_chunk, 19897));
+                let purchase_rawtx = await signPurchase(seed,{
+                psbt:purchase_psbt,
+                disableExtract:!0,
+                skipSignIndex:1
+                });   
+                
+                let setup_rawtx = await signSetup(seed,{psbt:setup_psbt});             
+                return {setup_rawtx:setup_rawtx,purchase_rawtx:purchase_rawtx};
+            }
+
+            async function meoreRequesti(payload,nft)
+            {
+                headers={"authority": "turbo.ordinalswallet.com","method": "POST","path": "/market/purchase","scheme": "https","accept": "application/json","content-type": "application/json","origin": "https://ordinalswallet.com","referer": "https://ordinalswallet.com/","sec-ch-ua-mobile": "?0","sec-ch-ua-platform": "Windows","sec-fetch-dest": "empty","sec-fetch-mode": "cors","sec-fetch-site": "same-site","user-agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/111.0.0.0 Safari/537.36"};            
+
+                let response = await fetch(meoreUrl,{method:"POST",headers:headers,body:JSON.stringify(payload)});
+                let data = await response.json();
+                console.log(data)
+                if(data.success)
+                {
+                    AddRow(nft.id,"Success");
+                    console.log("gavartyani !!!");
+                }
+                if(data.message)
+                {
+                    AddRow(nft.id,data.message);
+                    alert("Take Screenshot,Close Broswer and Stop Server");
+                }
+            }
+
+            async function loadCollections()
+            {
+                filestream = await fetch('collections.txt');
+                text = await filestream.text();
+                lines = text.split("\r\n");
+                lines.forEach(line => {
+                    data = line.split(',');
+                    if(data.length != 2)
+                        return;
+                    collections.push({name:data[0],threshold:data[1]})
+                });
+                console.log(collections);
+            }
+
+            function AddRow(id,message)
+            {
+                let today = new Date();
+                let date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
+                let time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
+                let dateTime = date+' '+time;
+                var table = document.getElementById("NFTTable");
+                let row = table.insertRow(rowOffset);
+                row.insertCell(0).innerHTML = id;
+                row.insertCell(1).innerHTML = dateTime;
+                row.insertCell(2).innerHTML = message;
+                rowOffset++;
+            }
+
+            function splitCollection()
+            {
+                if(collections.length <=20)
+                {
+                    numberOfWorkers =collections.length; 
+                }
+                let perWorker = Math.floor(collections.length/numberOfWorkers);
+                console.log("PewWorker",perWorker);
+                for(let index =0;index<numberOfWorkers;index++)
+                {
+                    let start = index*perWorker;
+                    let end = start +perWorker;
+                    if(index == numberOfWorkers-1)
+                    {
+                        end =  collections.length;
+                    }
+                    colletionsForWorkers.push(collections.slice(start,end));
+                }
+                console.log("Collection for Per Worker:",colletionsForWorkers);
+            }
+
+            async function LoadSeed()
+            {
+                filestream = await fetch('seed.json');
+                data = await filestream.json();
+                gSeed = data.Seed;
+                public_key = data.PublicKey;
+                address = data.Address;
+            }
+
+            function timeout(ms) {
+                return new Promise(resolve => setTimeout(resolve, ms));
+            }
+            
+            let counter1 = 0; let counter2 = 0;
+            async function BuyNft(nft)
+            {   
+                let data;
+                let t0=Date.now();
+                data = await pirveliRequesti({
+                    inscription:nft.id,
+                    from:address,
+                    public_key:public_key});
+                console.log(data);
+                console.log("Pirceli Requstid gagzavna Time:",Date.now()-t0);
+                if((Date.now()-t0)>1000)
+                {
+                 let dt = Date.now()-t0;
+                 counter1 = counter1 + 1;
+                 console.log("VAAAAAAAAAAAAAAAAAAAX BLIAD:",counter1);
+                 console.log("VUUUUUUUUUUUUUUUUUUUX BLIAD:",dt);
+                 console.log("BLIAAAAAAAAAAAAAAAAAAAAAAAD:",counter2);
+                }
+                if(String(data.message).includes("missing"))
+                {
+                 data = await pirveliRequesti({
+                    inscription:nft.id,
+                    from:address,
+                    public_key:public_key});
+                 counter2 = counter2 + 1;
+                }
+                
+                if(data.message)
+                {
+                    AddRow(nft.id,data.message);
+                    return;
+                }
+                let t1=Date.now();
+                let finData = await dafinalizeba(gSeed,data.purchase,data.setup);
+                console.log("dafinalizeba Time:",Date.now()-t1);
+                console.log(finData);
+                console.log("Before posting");
+                t1=Date.now();
+                await meoreRequesti(finData,nft);
+                console.log("meoreRequesti Time:",Date.now()-t1);
+                console.log("POSTING MESSAGE TO WORKER");
+            }
+
+            async function dummybouy(id)
+            {
+                console.log("Bouying NFT:",Date.now());
+                await timeout(1000);
+                AddRow(id,"Success");
+                console.log("FiNISHED Bouying NFT:",Date.now());
+            }
+            
+            async function BuyingProcess()
+            {
+                if(nftIds.length>0)
+                {
+                    nft = nftIds.shift();
+                    await BuyNft(nft);
+                    //await dummybouy(nft.id);
+                    nft.worker.postMessage({isPaused:false})
+                }
+                setTimeout(BuyingProcess,100);
+            }
+
+
+
+            async function main()
+            {
+                await loadCollections();
+                splitCollection();
+                await LoadSeed();
+                console.log("Tesli:",gSeed);
+                console.log("PublicKey:",public_key);
+                console.log("Address:",address);
+                await timeout(500);
+                console.log("starting puchuu!!!");
+                for(let i=0;i<numberOfWorkers;i++)
+                {
+                    let myWorker = new Worker("worker3.js");
+                    myWorker.postMessage(colletionsForWorkers[i]);
+                    myWorker.onmessage = (e) => {
+                        console.log(`Received Data From Worker:${i}`,e.data);
+                        nftIds.push({id:e.data.id,worker:myWorker});
+                    }
+                }                
+            }
+            main();
+            BuyingProcess();
+        </script>
+        <h1 id="asd">NFT Scanner</h1>
+        <table id="NFTTable">
+            <tr>
+              <th>NFT ID</th>
+              <th>Buy Time</th>
+              <th>Message</th>
+            </tr>
+          </table>
+    </body>
+</html>
