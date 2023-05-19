@@ -1,6 +1,5 @@
 # OPTIMUM-NFT-marketplace-bot
- Monitoring prices of NFTs , automation of psbt-signing and buying process on ordinalswallet.com 
-Allow me to provide a professional version of the description:
+ Monitoring prices of NFTs , automation of psbt-signing and buying process 
 
 Let me provide a detailed overview of the specifications and parameters of OPTIMUM:
 
